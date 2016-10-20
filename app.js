@@ -43,8 +43,22 @@ $(document).ready(function(){
 		$('.box').removeClass(colors);
 	})
 	
+	//////////////////////////////////////////////////
+	var isDragging = false;
+	$('.box').mousedown(function(){
+		isDragging = true;
+	})
 	
+	$('.box').mouseup(function(){
+			isDragging = false;
+	})
 	
+	$('.box').mouseover(function(){
+		if (isDragging){
+			$(this).addClass(color);
+		}
+	})
+		
 	
 	
 })
